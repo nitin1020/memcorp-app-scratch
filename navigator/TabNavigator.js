@@ -1,6 +1,6 @@
 import React from 'react'
 import { createBottomTabNavigator, createSwitchNavigator, createMaterialTopTabNavigator } from 'react-navigation'
-import { Screen1, Screen2, Screen3, Screen4, Screen5 } from '../screens'
+import { HomeScreen, CardScreen, WarScreen, SwordScreen, EventScreen } from '../screens'
 import styled from 'styled-components'
 import { Ionicons } from '@expo/vector-icons'
 import { red } from 'ansi-colors'
@@ -9,96 +9,85 @@ import posed from "react-native-pose";
 import { Animated, View, TouchableWithoutFeedback } from 'react-native'
 import { TouchableOpacity } from 'react-native-gesture-handler'
 
-const HomeStack = Screen1
+// HomeScreen.navigationOptions = {
+//     tabBarLabel: "Home",
+//     tabBarIcon: ({ focused }) => {
+//         return <IconView
+//             pose={focused ? "active" : "inactive"}
+//         >
+//             <Image
+//                 resizeMode="contain"
+//                 source={require('../assets/dart.png')}
+//             />
+//         </IconView>
+//     }
+// }
 
-HomeStack.navigationOptions = {
-    tabBarLabel: "Home",
-    tabBarIcon: ({ focused }) => {
-        return <IconView
-            pose={focused ? "active" : "inactive"}
-        >
-            <Image
-                resizeMode="contain"
-                source={require('../assets/dart.png')}
-            />
-        </IconView>
-    }
-}
+// CardScreen.navigationOptions = {
+//     tabBarLabel: "Card",
+//     tabBarIcon: ({ focused }) => {
 
-const SwordStack = Screen2;
+//         return <IconView
+//             pose={focused ? "active" : "inactive"}
+//         >
+//             <Image
+//                 resizeMode="contain"
+//                 source={require('../assets/nitin.png')}
+//             />
+//         </IconView>
+//     }
+// }
 
-SwordStack.navigationOptions = {
-    tabBarLabel: "Sword",
-    tabBarIcon: ({ focused }) => {
-        return <IconView
-            pose={focused ? "active" : "inactive"}
-        >
-            <Image
-                resizeMode="contain"
-                source={require('../assets/_sword.png')}
-            />
-        </IconView>
-    }
-}
+// SwordScreen.navigationOptions = {
+//     tabBarLabel: "Sword",
+//     tabBarIcon: ({ focused }) => {
+//         return <IconView
+//             pose={focused ? "active" : "inactive"}
+//         >
+//             <Image
+//                 resizeMode="contain"
+//                 source={require('../assets/cards.png')}
+//             />
+//         </IconView>
+//     }
+// }
 
-const CardStack = Screen3
+// WarScreen.navigationOptions = {
+//     tabBarLabel: "War",
+//     tabBarIcon: ({ focused }) => {
 
-CardStack.navigationOptions = {
-    tabBarLabel: "Card",
-    tabBarIcon: ({ focused }) => {
+//         return <IconView
+//             pose={focused ? "active" : "inactive"}
+//         >
+//             <Image
+//                 resizeMode="contain"
+//                 source={require('../assets/clanwars.png')}
+//             />
+//         </IconView>
+//     }
+// }
 
-        return <IconView
-            pose={focused ? "active" : "inactive"}
-        >
-            <Image
-                resizeMode="contain"
-                source={require('../assets/sword.png')}
-            />
-        </IconView>
-    }
-}
+// EventScreen.navigationOptions = {
+//     tabBarLabel: "Event",
+//     tabBarIcon: ({ focused }) => {
 
-const WarStack = Screen4;
-
-WarStack.navigationOptions = {
-    tabBarLabel: "War",
-    tabBarIcon: ({ focused }) => {
-
-        return <IconView
-            pose={focused ? "active" : "inactive"}
-        >
-            <Image
-                resizeMode="contain"
-                source={require('../assets/cards.png')}
-            />
-        </IconView>
-    }
-}
-
-
-const EventStack = Screen5;
-
-EventStack.navigationOptions = {
-    tabBarLabel: "Event",
-    tabBarIcon: ({ focused }) => {
-
-        return <IconView
-            pose={focused ? "active" : "inactive"}
-        >
-            <Image
-                resizeMode="contain"
-                source={require('../assets/cards.png')}
-            />
-        </IconView>
-    }
-}
+//         return <IconView
+//             pose={focused ? "active" : "inactive"}
+//         >
+//             <Image
+//                 resizeMode="contain"
+//                 source={require('../assets/event.png')}
+//             />
+//         </IconView>
+//     }
+// }
 
 export const TabNavigator = createMaterialTopTabNavigator({
-    HomeStack,
-    SwordStack,
-    CardStack,
-    WarStack,
-    EventStack
+    HomeScreen,
+    SwordScreen,
+    CardScreen,
+    WarScreen,
+    EventScreen
 }, {
 
     // lazy: true,
@@ -132,35 +121,9 @@ export const TabNavigator = createMaterialTopTabNavigator({
         },
         iconStyle: {
             overflow: "visible",
-            zIndex: 23333
+            zIndex: 23333,
+            borderColor: 'black'
         }
     }
-
 })
 
-const IconView = posed.View({
-    active: {
-        scale: 1.3, opacity: 1,
-        scaleY: 1,
-        transition: {
-            opacity: { ease: 'easeIn', duration: 300 },
-            default: { ease: 'linear', duration: 500 }
-        }
-    },
-    inactive: {
-        scale: 0.7, opacity: 0.3, scaleY: 1,
-        transition: {
-            opacity: { ease: 'easeOut', duration: 300 },
-            default: { ease: 'linear', duration: 500 }
-        }
-    }
-
-})
-
-
-const Image = styled.Image`
-    width: 36px;
-    height:36px;
-    z-index:10000;
-    position:relative;
-`
