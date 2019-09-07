@@ -6,5 +6,5 @@ import Screen5 from './Screen5'
 
 
 export {
-    Screen1, Screen5, Screen2, Screen3, Screen4
+    Screen1, Screen2, Screen3, Screen4, Screen5
 }

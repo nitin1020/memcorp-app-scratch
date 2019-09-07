@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { Text } from 'react-native';
 
-class Screen2 extends Component {
+class Screen3 extends Component {
     static navigationOptions = {
         header: null
         //title: "Home"
@@ -17,7 +17,7 @@ class Screen2 extends Component {
     }
 }
 
-export default Screen2;
+export default Screen3;
 
 const Container = styled.View`
     flex: 1;

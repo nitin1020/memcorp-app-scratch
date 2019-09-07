@@ -35,7 +35,7 @@ SwordStack.navigationOptions = {
         >
             <Image
                 resizeMode="contain"
-                source={require('../assets/Sword.png')}
+                source={require('../assets/_sword.png')}
             />
         </IconView>
     }
@@ -52,7 +52,7 @@ CardStack.navigationOptions = {
         >
             <Image
                 resizeMode="contain"
-                source={require('../assets/cards.png')}
+                source={require('../assets/sword.png')}
             />
         </IconView>
     }
@@ -101,12 +101,12 @@ export const TabNavigator = createMaterialTopTabNavigator({
     EventStack
 }, {
 
-    lazy: true,
+    // lazy: true,
     tabBarPosition: "bottom",
     animationEnabled: true,
     swipeEnabled: true,
-    resetOnBlur: false,
-    removeClippedSubviews: true,
+    //  resetOnBlur: false,
+    // removeClippedSubviews: true,
     tabBarOptions: {
 
         indicatorStyle: {
