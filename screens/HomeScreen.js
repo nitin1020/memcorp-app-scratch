@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-import { Text, Dimensions, SafeAreaView } from 'react-native';
-import { IconView, IconImage, Container, Image } from '../components'
+import { IconView, IconImage, Container, Image, Text, Content } from '../components'
 
 class HomScreen extends Component {
     static navigationOptions = {
@@ -13,10 +11,17 @@ class HomScreen extends Component {
             return <IconView
                 pose={focused ? "active" : "inactive"}
             >
-                <IconImage
-                    resizeMode="contain"
-                    source={require('../assets/dart.png')}
-                />
+                <Content>
+                    <IconImage
+                        resizeMode="contain"
+                        source={require('../assets/dart.png')}
+                    />
+                    {
+                        focused ? <Text>
+                            Home
+                </Text> : <Text></Text>
+                    }
+                </Content>
             </IconView>
         }
 
@@ -32,4 +37,5 @@ class HomScreen extends Component {
 }
 
 export default HomScreen;
+
 

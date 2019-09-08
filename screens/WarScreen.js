@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-
-import { IconView, IconImage, Container, Image } from '../components'
+import { IconView, IconImage, Container, Image, Text, Content } from '../components'
 
 class WarScreen extends Component {
 
@@ -13,10 +11,17 @@ class WarScreen extends Component {
             return <IconView
                 pose={focused ? "active" : "inactive"}
             >
-                <IconImage
-                    resizeMode="contain"
-                    source={require('../assets/clanwars.png')}
-                />
+                <Content>
+                    <IconImage
+                        resizeMode="contain"
+                        source={require('../assets/clanwars.png')}
+                    />
+                    {
+                        focused ? <Text>
+                            Wars
+                </Text> : <Text></Text>
+                    }
+                </Content>
             </IconView>
         }
 

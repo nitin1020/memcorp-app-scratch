@@ -20,12 +20,14 @@ const IconView = posed.View({
 
 })
 
+const Content = styled.View``
 
 const IconImage = styled.Image`
     width: 36px;
     height:36px;
-    z-index:10000;
-    position:relative;
+    position: relative;
+    left: 50%;
+    margin-left: -18;
 `
 
 const Container = styled.View`
@@ -33,6 +35,9 @@ const Container = styled.View`
     align-items: center;
     justify-content: center;
     background: lightblue;
+    z-index:-9999;
+    position:relative;
+
 `
 
 const Image = styled.Image`
@@ -42,9 +47,22 @@ const Image = styled.Image`
     bottom: 0;
     margin-top:20;
 `
+
+const Text = styled.Text`
+    font-size:7px;
+   text-align: center; 
+    font-weight: 500;
+    color: white;
+    font-family: monospace;
+   
+    width:40;
+   
+`
 export {
     IconView,
     IconImage,
     Container,
-    Image
+    Image,
+    Text,
+    Content
 }

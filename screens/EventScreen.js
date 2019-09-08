@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-import { IconView, IconImage, Container, Image } from '../components'
+import { IconView, IconImage, Container, Image, Text, Content } from '../components'
 
 class EventScreen extends Component {
 
@@ -12,10 +11,17 @@ class EventScreen extends Component {
             return <IconView
                 pose={focused ? "active" : "inactive"}
             >
-                <IconImage
-                    resizeMode="contain"
-                    source={require('../assets/event.png')}
-                />
+                <Content>
+                    <IconImage
+                        resizeMode="contain"
+                        source={require('../assets/event.png')}
+                    />
+                    {
+                        focused ? <Text>
+                            Events
+                </Text> : <Text></Text>
+                    }
+                </Content>
             </IconView>
         }
     }

@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import styled from 'styled-components'
-import { Text } from 'react-native'
-import { IconView, IconImage, Container, Image } from '../components'
+import { IconView, IconImage, Container, Image, Text, Content } from '../components'
 
 class CardScreen extends Component {
     static navigationOptions = {
@@ -12,10 +10,17 @@ class CardScreen extends Component {
             return <IconView
                 pose={focused ? "active" : "inactive"}
             >
-                <IconImage
-                    resizeMode="contain"
-                    source={require('../assets/cards.png')}
-                />
+                <Content>
+                    <IconImage
+                        resizeMode="contain"
+                        source={require('../assets/cards.png')}
+                    />
+                    {
+                        focused ? <Text>
+                            Cards
+                </Text> : <Text></Text>
+                    }
+                </Content>
             </IconView>
         }
 
