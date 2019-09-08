@@ -1,7 +1,7 @@
 import HomeScreen from './HomeScreen'
 import WarScreen from './WarScreen'
-import CardScreen from './CardScreen'
-import SwordScreen from './SwordScreen'
+import CardScreen from './SwordScreen'
+import SwordScreen from './CardScreen'
 import EventScreen from './EventScreen'
 
 export {

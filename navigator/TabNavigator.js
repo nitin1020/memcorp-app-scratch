@@ -14,22 +14,28 @@ import {
 export const TabNavigator = createMaterialTopTabNavigator(
     {
         HomeScreen,
-        SwordScreen,
         CardScreen,
+        SwordScreen,
         WarScreen,
         EventScreen
     },
     {
+        initialRouteName: 'SwordScreen',
         tabBarPosition: "bottom",
         animationEnabled: true,
         swipeEnabled: true,
         tabBarOptions: {
             indicatorStyle: {
                 backgroundColor: "#5B8BAF",
-                height: "100%",
+                height: 70,
+                width: 110,
+                left: -18,
                 flexDirection: "column",
                 justifyContent: "center",
-                alignItems: "center"
+                alignItems: "center",
+                borderTopLeftRadius: 6,
+                borderTopRightRadius: 6,
+
             },
             style: {
                 backgroundColor: "#344153",

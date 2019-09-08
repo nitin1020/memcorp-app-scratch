@@ -26,6 +26,10 @@ class HomScreen extends Component {
         }
 
     }
+
+    constructor(pros) {
+        super(pros)
+    }
     state = {}
     render() {
         return (

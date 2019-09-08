@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { IconView, IconImage, Container, Image, Text, Content } from '../components'
-
+import { Ionicons } from '@expo/vector-icons'
 class CardScreen extends Component {
     static navigationOptions = {
         header: null,
-        tabBarLabel: "Sword",
+        tabBarLabel: "Cards",
         tabBarIcon: ({ focused }) => {
 
             return <IconView
@@ -13,23 +13,24 @@ class CardScreen extends Component {
                 <Content>
                     <IconImage
                         resizeMode="contain"
-                        source={require('../assets/cards.png')}
+                        source={require('../assets/goldsword.png')}
                     />
                     {
                         focused ? <Text>
-                            Cards
+                            Swords
                 </Text> : <Text></Text>
                     }
                 </Content>
             </IconView>
-        }
 
+        }
     }
+
     state = {}
     render() {
         return (
             <Container>
-                <Image source={require('../assets/2.png')} />
+                <Image source={require('../assets/3.png')} />
             </Container>
         );
     }

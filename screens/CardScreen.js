@@ -4,7 +4,7 @@ import { IconView, IconImage, Container, Image, Text, Content } from '../compone
 class CardScreen extends Component {
     static navigationOptions = {
         header: null,
-        tabBarLabel: "Cards",
+        tabBarLabel: "Sword",
         tabBarIcon: ({ focused }) => {
 
             return <IconView
@@ -13,24 +13,23 @@ class CardScreen extends Component {
                 <Content>
                     <IconImage
                         resizeMode="contain"
-                        source={require('../assets/goldsword.png')}
+                        source={require('../assets/cards.png')}
                     />
                     {
                         focused ? <Text>
-                            Swords
+                            Cards
                 </Text> : <Text></Text>
                     }
                 </Content>
             </IconView>
-
         }
-    }
 
+    }
     state = {}
     render() {
         return (
             <Container>
-                <Image source={require('../assets/3.png')} />
+                <Image source={require('../assets/2.png')} />
             </Container>
         );
     }
